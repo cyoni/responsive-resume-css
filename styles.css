@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: clamp(7rem, 20vw, 15rem) 1fr;
+  align-items: center;
+  min-height: 100vh;
+  gap: 10vw;
+}
+
+main {
+  width: calc(100vw - clamp(7rem, 20vw, 15rem) - 15vw);
+  border: 3px solid orange;
+  padding-block: 2rem;
+}
+
+.job-experience {
+  display: grid;
+  justify-content: start;
+  grid-auto-flow: column;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-block: 1rem;
+  position: relative;
+}
+
+aside {
+  align-self: stretch;
+  display: flex;
+  justify-content: end;
+}
+
+aside img {
+  width: 50px;
+}
+
+aside .icon-list {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  border-left: 1px solid red;
+  margin-left: clamp(3rem, 10vh, 10rem);
+  height: 100%;
+  margin-top: 0;
+  align-content: center;
+  padding-left: 0;
+}
+
+.icon-list > li {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.icon-list > li::before {
+  --_size: 0.5rem;
+  content: "";
+  width: var(--_size);
+  height: var(--_size);
+  left: 0;
+  transform: translateX(-50%);
+  background: black;
+  aspect-ratio: 1;
+  position: absolute;
+  border-radius: 50%;
+  outline: 0.5rem solid rgb(0, 136, 255);
+}
+
+.eye-brow {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin: 0;
+}
+
+.page-title {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.job {
+  padding: 2rem;
+  border-radius: 0.25rem;
+  background-color: aliceblue;
+  width: 20rem;
+}
+
+.job:first-child::before {
+  content: "Current";
+  position: absolute;
+  letter-spacing: 0.2rem;
+  top: 0rem;
+  left: 0;
+  color: green;
+}
+
+.job * {
+  margin: 0;
+}
+
+.job-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1rem;
+}
