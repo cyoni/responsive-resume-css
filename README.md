@@ -1,3 +1,4 @@
+This responsive page was developed without using any media queries!
 
 ## Desktop:
 <img src="https://github.com/cyoni/responsive-resume-css/assets/44746539/017cc2d2-6868-4bdf-9ffc-a5aa9be2598b" alt="desktop" width="400"/>
